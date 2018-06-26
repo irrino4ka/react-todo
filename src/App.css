@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.Header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.Header p {
+  line-height: 32px;
+  margin: 0;
+}
+
+.Header div:last-child {
+  margin-left: auto;
+}
+
+.Header button {
+  font-size: 12px;
+}
