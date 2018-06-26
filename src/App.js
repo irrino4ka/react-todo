@@ -19,7 +19,8 @@ class App extends Component {
   }
 
   clickHandler() {
-    this.setState({addTask: true})
+    this.setState({addTask: true});
+    console.log('add button');
   }
 
   render() {

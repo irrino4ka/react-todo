@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import classes from './TableComponent.css'
 
 import { Table } from 'react-bootstrap';
-import Button from 'react-bootstrap/lib/Button';
 
 import TableRow from './TableRow/TableRow';
 
@@ -37,7 +36,9 @@ class TableComponent extends Component {
                             id= {task.id}
                             name= {task.name}
                             task = {task.task}
-                            description={task.description}  key={task.id}/>
+                            description={task.description}
+                            newId = {task.newId}
+                            key={task.id}/>
                     ))}
 {/*                         
                         <tr>

@@ -1,0 +1,11 @@
+.Button {
+    margin-bottom: 5px;
+
+}
+
+.table tbody > tr > td.VertAligned {
+    vertical-align: middle;
+}
+.VertAligned {
+    vertical-align: middle !important;
+}
