@@ -13,7 +13,7 @@ class TableRow extends Component {
     }
     deletePostHandler = () => {
         console.log(this.props.id, this.props.newId);
-        axios.delete('/tasks/' + this.props.newId)
+        axios.delete('/tasks' + this.props.newId)
             .then(response => {
                 console.log(response)
             })
@@ -22,10 +22,11 @@ class TableRow extends Component {
 
     editPostHandler = () => {
         console.log(this.props.id, this.props.newId);
-        axios.get('/tasks/' + this.props.newId)
+        axios.get('/tasks.json?id=' + this.props.newId)
             .then(response => {
                 console.log(response)
-            });
+            })
+            .catch(error => console.log(error));
         // axios.get('/tasks/',{params: {id:  this.props.newId}})
         // .then( response => {
         //    console.log(response);
@@ -47,21 +48,3 @@ class TableRow extends Component {
 }
 
 export default TableRow;
-
-
-
-
-{/* <div className = {classes.BuildControl}>
-<div className = {classes.Label}>{props.label}</div>
-<button 
-    className = {classes.Less}
-    onClick={props.removed}
-    disabled={props.disabled}>
-        Less
-</button>
-<button 
-    className = {classes.More}
-    onClick={props.added}>
-        More
-</button>
-</div> */}

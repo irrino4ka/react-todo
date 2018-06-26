@@ -16,7 +16,7 @@ class AddForm extends Component {
     }
 
     handleSubmit(event) {
-        // event.preventDefault();
+        event.preventDefault();
         const task = {
             id: this.state.id,
             name: this.state.name,
@@ -25,7 +25,7 @@ class AddForm extends Component {
         }
 
         console.log(task);
-        axios.post('/newTasks', task)
+        axios.post('/tasks.json', task)
             .then(response => {
                 console.log('success', response)
             })

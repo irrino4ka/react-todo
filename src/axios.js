@@ -5,6 +5,6 @@ const instance = axios.create({
 })
 
 instance.defaults.headers.common['Authorization'] = 'Auth Token';
-instance.defaultConfig.headers.authorization = 'foo bar'
+// instance.defaults.crossDomain = true;
 
 export default instance;
